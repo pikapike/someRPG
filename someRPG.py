@@ -19,7 +19,7 @@ class Character:
     def getWeapon(self):
         return self.weapon
     def getCurrentStats(self):
-        return [self.statsI[i] - self.statsD[i] for i in range(len(self.statsI))]
+        return [self.statsI[i] + self.statsD[i] for i in range(len(self.statsI))]
     def getAttack(self):
         return self.getCurrentStats()[1]+self.weapon[0]
     def getSpeed(self):
@@ -32,9 +32,11 @@ class Character:
         damage = atkChar.getAttack() - self.getDefense()
         self.statsD[0] -= damage
         if self.getCurrentStats()[0] < 0:
-            self.statsD[0] = self.statsI[0]
+            self.statsD[0] = -self.statsI[0]
+            return 1
+        return 0
     def healDamage(self, heal):
-        self.statsD[0] += damage
+        self.statsD[0] += heal
         if self.statsD[0] < 0:
             self.statsD[0] = 0
 
@@ -43,7 +45,7 @@ class Character:
 weaponDatabase = WeaponDatabase()
 weaponDatabase.addWeapon("Wooden Sword", 5)
 player = Character("Player", [20, 10, 10, 5, 5], "Wooden Sword")
-foes = [Character("Foe 1", [random.randint(2,8) for j in range(5)], "Wooden Sword") for i in range(3)]
+foes = [Character("Foe "+str(i), [random.randint(2,8) for j in range(5)], "Wooden Sword") for i in range(3)]
 
 print("Welcome to someRPG!")
 print("-------------------")
@@ -53,6 +55,12 @@ for foe in foes:
 
 while True:
     print("What will "+player.getName()+" do?")
-    response = input()
-    
+    response = input().split()
+    if response[0] = "attack":
+        k = int(response[1]) - 1
+        if 0 <= k < len(foes):
+            if foes[k].takeDamage(player):
+                print(foes[k].getName() + " defeated!")
+                foes.pop(k)
+
     
