@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 
 public class WeaponDatabase {
-    public Dictionary<string, int> weaponPower;
-    public Dictionary<string, int> weaponType;
+    public Dictionary<string, int> weaponPower; // Weapon Mt
+    public Dictionary<string, int> weaponType; // To distinguish between different weapon type which have different effects
     public WeaponDatabase()
     {
-
+        this.weaponPower = new Dictionary<string, int>();
+        this.weaponType = new Dictionary<string, int>();
     }
-    public void AddWeapon(string weaponName, int weaponMt, int weaponType) {
-        weaponPower[weaponName] = weaponMt;
-        weaponType[weaponName] = weaponType;
+    public void AddWeapon(string name, int mt, int type) {
+        weaponPower[name] = mt;
+        weaponType[name] = type;
     }
     public int GetPower(string weapon) {
         return weaponPower[weapon];
@@ -23,6 +24,11 @@ public class WeaponDatabase {
 public class Weapon {
     public string weapon;
     public List<int> enhancements;
+    public Weapon(string weapon, List<int> enhancements)
+    {
+        this.weapon = weapon;
+        this.enhancements = enhancements;
+    }
     public int GetPower(WeaponDatabase database) // I have a feeling this database should be made global or something; don't want to feed it into a function
     {
         return database.GetPower(weapon);
@@ -44,6 +50,7 @@ public class Character {
     {
         this.name = name;
         this.statsI = stats;
+        this.statsD = new List<int>(new int[this.statsI.Count]);
         this.weapon = weapon;
     }
     public string GetName()
@@ -97,7 +104,12 @@ namespace someRPG
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WeaponDatabase weaponDatabase = new WeaponDatabase();
+            weaponDatabase.AddWeapon("Wooden Sword", 5, 0);
+            Weapon playerWeapon = new Weapon("Wooden Sword", new List<int>());
+            Character player = new Character("Player", new List<int>{20, 10, 10, 5, 5}, playerWeapon);
+            Weapon enemyWeapon = new Weapon("Wooden Sword", new List<int>());
+            Character enemy = new Character("Player", new List<int>{12, 7, 7, 5, 5}, playerWeapon);
         }
     }
 }
