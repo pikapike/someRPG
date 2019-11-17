@@ -1,0 +1,11 @@
+/Users/isaac/Desktop/someRPG/someRPG/bin/Debug/netcoreapp2.2/someRPG.deps.json
+/Users/isaac/Desktop/someRPG/someRPG/bin/Debug/netcoreapp2.2/someRPG.runtimeconfig.json
+/Users/isaac/Desktop/someRPG/someRPG/bin/Debug/netcoreapp2.2/someRPG.runtimeconfig.dev.json
+/Users/isaac/Desktop/someRPG/someRPG/bin/Debug/netcoreapp2.2/someRPG.dll
+/Users/isaac/Desktop/someRPG/someRPG/bin/Debug/netcoreapp2.2/someRPG.pdb
+/Users/isaac/Desktop/someRPG/someRPG/obj/Debug/netcoreapp2.2/someRPG.csprojAssemblyReference.cache
+/Users/isaac/Desktop/someRPG/someRPG/obj/Debug/netcoreapp2.2/someRPG.csproj.CoreCompileInputs.cache
+/Users/isaac/Desktop/someRPG/someRPG/obj/Debug/netcoreapp2.2/someRPG.AssemblyInfoInputs.cache
+/Users/isaac/Desktop/someRPG/someRPG/obj/Debug/netcoreapp2.2/someRPG.AssemblyInfo.cs
+/Users/isaac/Desktop/someRPG/someRPG/obj/Debug/netcoreapp2.2/someRPG.dll
+/Users/isaac/Desktop/someRPG/someRPG/obj/Debug/netcoreapp2.2/someRPG.pdb
