@@ -109,7 +109,7 @@ namespace someRPG
             Weapon playerWeapon = new Weapon("Wooden Sword", new List<int>());
             Character player = new Character("Player", new List<int>{20, 10, 10, 5, 5}, playerWeapon);
             Weapon enemyWeapon = new Weapon("Wooden Sword", new List<int>());
-            Character enemy = new Character("Player", new List<int>{12, 7, 7, 5, 5}, playerWeapon);
+            Character enemy = new Character("Player", new List<int>{12, 7, 7, 5, 5}, enemyWeapon);
         }
     }
 }
