@@ -25,7 +25,7 @@ namespace someRPG {
     public List<int> GetCurrentStats()
     {
         List<int> statsComb = new List<int>();
-        for (int i = 0; i < statsComb.Count; i++) {
+        for (int i = 0; i < statsI.Count; i++) {
             statsComb.Add(statsI[i]+statsD[i]);
         }
         return statsComb;

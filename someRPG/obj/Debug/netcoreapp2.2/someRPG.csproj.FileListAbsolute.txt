@@ -9,3 +9,14 @@
 /Users/isaac/Desktop/someRPG/someRPG/obj/Debug/netcoreapp2.2/someRPG.AssemblyInfo.cs
 /Users/isaac/Desktop/someRPG/someRPG/obj/Debug/netcoreapp2.2/someRPG.dll
 /Users/isaac/Desktop/someRPG/someRPG/obj/Debug/netcoreapp2.2/someRPG.pdb
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\bin\Debug\netcoreapp2.2\someRPG.deps.json
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\bin\Debug\netcoreapp2.2\someRPG.runtimeconfig.json
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\bin\Debug\netcoreapp2.2\someRPG.runtimeconfig.dev.json
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\bin\Debug\netcoreapp2.2\someRPG.dll
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\bin\Debug\netcoreapp2.2\someRPG.pdb
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\obj\Debug\netcoreapp2.2\someRPG.csprojAssemblyReference.cache
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\obj\Debug\netcoreapp2.2\someRPG.csproj.CoreCompileInputs.cache
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\obj\Debug\netcoreapp2.2\someRPG.AssemblyInfoInputs.cache
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\obj\Debug\netcoreapp2.2\someRPG.AssemblyInfo.cs
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\obj\Debug\netcoreapp2.2\someRPG.dll
+C:\Users\Cameron\Desktop\someRPG-workspace\someRPG\someRPG\obj\Debug\netcoreapp2.2\someRPG.pdb

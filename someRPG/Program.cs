@@ -14,6 +14,12 @@ namespace someRPG
             Weapon enemyWeapon = new Weapon("Wooden Sword", new List<int>());
             Character enemy = new Character("Player", new List<int>{12, 7, 7, 5, 5}, enemyWeapon);
             Console.WriteLine("Test line");
+            // TESTING BATTLE
+            List<Character> Team1 = new List<Character>(); Team1.Add(player);
+            List<Character> Team2 = new List<Character>(); Team2.Add(enemy);
+            Battle testbattle = new Battle("TestBattle", weaponDatabase, Team1, Team2);
+            testbattle.TestTurn();
+
         }
     }
 }
