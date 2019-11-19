@@ -26,9 +26,23 @@ namespace someRPG {
     {
         return team2;
     }
+    public List<Character> GetAllCharacters() 
+    {
+        List<Character> allCharacters = new List<Character>();
+        foreach (Character c in GetTeam1()) {
+            allCharacters.Add(c);
+        } foreach (Character c in GetTeam2()) {
+            allCharacters.Add(c);
+        }
+        return allCharacters;
+    }
     public List<Character> GetTurnQueue()
     {
         return turnQueue;
+    }
+    public void SetTurnQueue(List<Character> newTurnQueue)
+    {
+        turnQueue = newTurnQueue;
     }
     public WeaponDatabase GetWeaponDatabase()
     {
@@ -38,26 +52,27 @@ namespace someRPG {
     {
         victim.TakeDamageFromEnemy(aggressor, GetWeaponDatabase());
     }
-    public void TestTurn()
+    public void SetupPhase()
     {
-        // Has the first character in team1 attack the first character in team2
-        // prints the attacked characters stats before and after the attack
-        List<int> firststats = GetTeam2()[0].GetCurrentStats();
-        AttackCharacter(GetTeam1()[0], GetTeam2()[0]);
-        List<int> secondstats = GetTeam2()[0].GetCurrentStats();
-        foreach (int stat in firststats)
-        {
-            Console.WriteLine(stat);
-        }
-        Console.WriteLine();
-        foreach (int stat in secondstats)
-        {
-            Console.WriteLine(stat);
+        // Creates queue by getting all Characters and then sorting them by speed
+        List<Character> newTurnQueue = GetAllCharacters();
+        newTurnQueue.Sort((c1,c2) => c1.GetSpeed().CompareTo(c2.GetSpeed()));
+        SetTurnQueue(newTurnQueue);
+
+    }
+    public void RunPhase()
+    {
+        // Testing attack by attacking first player on other teams 
+        foreach(Character c in GetTurnQueue()) {
+            if (GetTeam1().Contains(c)) {
+                AttackCharacter(c, GetTeam2()[0]);
+            } else {
+                AttackCharacter(c, GetTeam1()[0]);
+            }
         }
     }
 
     }
-
 
 }
 
